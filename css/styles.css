@@ -1,3 +1,86 @@
+/* ========== Респонсивність ========== */
+.container {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .nav-list,
+  .contact-list {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+  }
+}
+
+.section_button {
+  background-image: 
+    linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url("../images/img-name@1x.jpg");
+}
+
+@media (min-resolution: 192dpi) {
+  .section_button {
+    background-image: 
+      linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url("../images/img-name@2x.jpg");
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .nav-list,
+  .contact-list {
+    display: none;
+  }
+}
+
+/* ========== Мобільне меню ========== */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--white);
+  padding: 40px 20px;
+  display: none;
+  flex-direction: column;
+  gap: 32px;
+  z-index: 1000;
+}
+
+.mobile-menu.is-open {
+  display: flex;
+}
+
+.mobile-menu .nav-list {
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mobile-menu .contact-list {
+  flex-direction: column;
+  gap: 16px;
+  margin-top: auto;
+}
+
+.mobile-menu .menu,
+.mobile-menu .contact {
+  font-size: 24px;
+  line-height: 1.2;
+}
+
 /* CSS Variables */
 :root {
     --iris: #4d5ae5;
@@ -14,7 +97,6 @@
     --dairy: #fcfcfc;
 }
 
-/* Global reset for headings, paragraphs and lists */
 h1, h2, h3, h4, h5, h6, p, ul {
     margin: 0;
     padding: 0;
@@ -42,20 +124,17 @@ img {
     display: block;
 }
 
-/* Container helper class */
 .container {
     width: 1158px;
     padding: 0 15px;
     margin: 0 auto;
 }
 
-/* General section class */
 .section {
     padding-top: 120px;
     padding-bottom: 120px;
 }
 
-/* Visually hidden pattern */
 .visually-hidden {
     position: absolute;
     width: 1px;
