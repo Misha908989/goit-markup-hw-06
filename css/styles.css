@@ -240,12 +240,19 @@ img {
 .section_button {
     background-color: #2e2f42;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
-                      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'><rect width='1' height='1' fill='%232e2f42'/></svg>");
+                      url("../images/img-name.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     padding: 112px 0;
     text-align: center;
+}
+
+@media (min-resolution: 192dpi) {
+    .section_button {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
+                          url("../images/img-name.jpg");
+    }
 }
 
 .title {
@@ -940,6 +947,15 @@ img {
 
     .section_button {
         padding: 112px 0;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
+                          url("../images/img-name.jpg");
+    }
+
+    @media (min-resolution: 192dpi) {
+        .section_button {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
+                              url("../images/img-name.jpg");
+        }
     }
 
     .features-list {
@@ -1043,7 +1059,14 @@ img {
         max-width: 1440px;
         margin: 0 auto;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
-                          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='1440' height='600'><rect width='1440' height='600' fill='%232e2f42'/></svg>");
+                          url("../images/img-name.jpg");
+    }
+
+    @media (min-resolution: 192dpi) {
+        .section_button {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
+                              url("../images/img-name.jpg");
+        }
     }
 
     .title {
