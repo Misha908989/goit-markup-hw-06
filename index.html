@@ -30,6 +30,68 @@
                     <li><a href="tel:+110001111111" class="contact">+11 (000) 111-11-11</a></li>
                 </ul>
             </address>
+            <button type="button" class="mobile-menu-btn" data-menu-open>
+                <svg class="mobile-menu-icon" width="24" height="24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="mobile-menu" data-menu>
+            <div class="mobile-menu-container">
+                <button type="button" class="mobile-menu-close" data-menu-close>
+                    <svg width="8" height="8">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="m1 1 6 6m0-6-6 6"/>
+                    </svg>
+                </button>
+                
+                <nav class="mobile-nav">
+                    <ul class="mobile-nav-list">
+                        <li><a href="./index.html" class="mobile-nav-link active">Studio</a></li>
+                        <li><a href="" class="mobile-nav-link">Portfolio</a></li>
+                        <li><a href="" class="mobile-nav-link">Contacts</a></li>
+                    </ul>
+                </nav>
+                
+                <address class="mobile-contacts">
+                    <ul class="mobile-contacts-list">
+                        <li><a href="tel:+110001111111" class="mobile-contact phone">+11 (000) 111-11-11</a></li>
+                        <li><a href="mailto:info@devstudio.com" class="mobile-contact">info@devstudio.com</a></li>
+                    </ul>
+                </address>
+                
+                <ul class="mobile-social">
+                    <li class="mobile-social-item">
+                        <a href="#" class="mobile-social-link">
+                            <svg class="mobile-social-icon" width="24" height="24">
+                                <use href="./images/icons.svg#icon-instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="mobile-social-item">
+                        <a href="#" class="mobile-social-link">
+                            <svg class="mobile-social-icon" width="24" height="24">
+                                <use href="./images/icons.svg#icon-twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="mobile-social-item">
+                        <a href="#" class="mobile-social-link">
+                            <svg class="mobile-social-icon" width="24" height="24">
+                                <use href="./images/icons.svg#icon-facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="mobile-social-item">
+                        <a href="#" class="mobile-social-link">
+                            <svg class="mobile-social-icon" width="24" height="24">
+                                <use href="./images/icons.svg#icon-linkedin"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
     <main>
@@ -441,17 +503,44 @@
             modal.classList.remove('is-open');
         });
 
-        // Close modal on overlay click
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
                 modal.classList.remove('is-open');
             }
         });
 
-        // Close modal on Escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && modal.classList.contains('is-open')) {
                 modal.classList.remove('is-open');
+            }
+        });
+
+        const mobileMenu = document.querySelector('[data-menu]');
+        const openMenuBtn = document.querySelector('[data-menu-open]');
+        const closeMenuBtn = document.querySelector('[data-menu-close]');
+
+        openMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('is-open');
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('is-open');
+            document.body.style.overflow = '';
+        });
+
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('is-open');
+                document.body.style.overflow = '';
+            });
+        });
+
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.remove('is-open');
+                document.body.style.overflow = '';
             }
         });
     </script>
