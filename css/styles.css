@@ -252,7 +252,7 @@ img {
 @media (min-resolution: 192dpi) {
     .section_button {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
-                          url("../images/img-name.jpg");
+                          url("../images/img-name@2.jpg");
     }
 }
 
@@ -959,7 +959,7 @@ img {
     @media (min-resolution: 192dpi) {
         .section_button {
             background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
-                              url("../images/img-name@.jpg");
+                              url("../images/img-name@2.jpg");
         }
     }
 
@@ -1081,7 +1081,7 @@ img {
     @media (min-resolution: 192dpi) {
         .section_button {
             background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
-                              url("../images/img-name@.jpg");
+                              url("../images/img-name@2.jpg");
         }
     }
 
