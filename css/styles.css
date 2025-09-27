@@ -203,6 +203,7 @@ img {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #434455;
+    font-style: normal;
 }
 
 .mobile-contact.phone {
@@ -640,6 +641,7 @@ img {
     margin-left: 16px;
     width: 24px;
     height: 24px;
+    fill: #ffffff;
 }
 
 /* Modal styles */
@@ -706,6 +708,7 @@ img {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: 8px;
     height: 8px;
+    fill: #2e2f42;
 }
 
 .modal-close-btn:hover .modal-close-icon,
@@ -763,6 +766,7 @@ img {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: 18px;
     height: 24px;
+    fill: #2e2f42;
 }
 
 .form-input:focus + .input-icon {
@@ -831,6 +835,7 @@ img {
 .checkbox-icon {
     width: 10px;
     height: 8px;
+    fill: transparent;
 }
 
 .privacy-link {
@@ -954,7 +959,7 @@ img {
     @media (min-resolution: 192dpi) {
         .section_button {
             background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
-                              url("../images/img-name.jpg");
+                              url("../images/img-name@.jpg");
         }
     }
 
@@ -1001,10 +1006,12 @@ img {
         text-align: left;
         max-width: 584px;
         gap: 72px 24px;
+        justify-content: flex-start; 
     }
 
     .footer-info {
         width: auto;
+        max-width: 264px;
     }
 
     .footer-text {
@@ -1024,6 +1031,15 @@ img {
     .modal {
         width: 408px;
         padding: 72px 24px 24px;
+    }
+
+    .media {
+        width: auto;
+    }
+
+    .subscribe-form {
+        width: 100%;
+        margin-top: 0;
     }
 }
 
@@ -1065,7 +1081,7 @@ img {
     @media (min-resolution: 192dpi) {
         .section_button {
             background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
-                              url("../images/img-name.jpg");
+                              url("../images/img-name@.jpg");
         }
     }
 
@@ -1133,14 +1149,23 @@ img {
         align-items: baseline;
         text-align: left;
         gap: 0;
+        justify-content: flex-start;
+        max-width: none;
     }
 
     .footer-info {
         margin-right: 120px;
+        max-width: 264px;
     }
 
     .media {
         margin-right: 80px;
+        width: auto;
+    }
+
+    .subscribe-form {
+        width: auto;
+        flex: 1;
     }
 }
 
