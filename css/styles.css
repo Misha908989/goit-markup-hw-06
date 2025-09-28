@@ -241,7 +241,7 @@ img {
 .section_button {
     background-color: #2e2f42;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
-                      url("../images/img-name.jpg");
+                      url("../images/people-office-1x.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -249,10 +249,12 @@ img {
     text-align: center;
 }
 
-@media (min-resolution: 192dpi) {
+@media (min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi),
+       (min-resolution: 2dppx) {
     .section_button {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
-                          url("../images/img-name@2.jpg");
+                          url("../images/people-office-2x.jpg");
     }
 }
 
@@ -306,6 +308,12 @@ img {
 
 .icon-container {
     display: none;
+}
+
+.features-icon {
+    width: 64px;
+    height: 64px;
+    fill: #2e2f42;
 }
 
 .featureshead {
@@ -635,6 +643,12 @@ img {
     background-color: #4d5ae5;
     border: none;
     border-radius: 4px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-button:hover,
+.subscribe-button:focus {
+    background-color: #404bbf;
 }
 
 .subscribe-icon {
@@ -953,13 +967,15 @@ img {
     .section_button {
         padding: 112px 0;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
-                          url("../images/img-name.jpg");
+                          url("../images/people-office-1x.jpg");
     }
 
-    @media (min-resolution: 192dpi) {
+    @media (min-device-pixel-ratio: 2),
+           (min-resolution: 192dpi),
+           (min-resolution: 2dppx) {
         .section_button {
             background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
-                              url("../images/img-name@2.jpg");
+                              url("../images/people-office-2x.jpg");
         }
     }
 
@@ -1075,13 +1091,15 @@ img {
         max-width: 1440px;
         margin: 0 auto;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
-                          url("../images/img-name.jpg");
+                          url("../images/people-office-1x.jpg");
     }
 
-    @media (min-resolution: 192dpi) {
+    @media (min-device-pixel-ratio: 2),
+           (min-resolution: 192dpi),
+           (min-resolution: 2dppx) {
         .section_button {
             background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
-                              url("../images/img-name@2.jpg");
+                              url("../images/people-office-2x.jpg");
         }
     }
 
