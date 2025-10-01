@@ -1168,7 +1168,6 @@ img {
         text-align: left;
         gap: 0;
         justify-content: flex-start;
-        max-width: none;
     }
 
     .footer-info {
